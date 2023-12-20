@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.22711058263971462" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.socialnetwork.map_toysocialnetwork.Controllers.RequestController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ListView fx:id="listview" layoutX="-12.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@Requests.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <styleClass>
+                  <String fx:value="list-cell" />
+                  <String fx:value="highlighted" />
+               </styleClass></ListView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <SplitPane dividerPositions="0.5147286821705427" layoutX="144.0" layoutY="119.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="activ-pane" stylesheets="@UserStyle.css">
+                     <children>
+                        <Button fx:id="RequestButton" layoutY="452.0" mnemonicParsing="false" onAction="#handleRequestUser" prefHeight="35.0" prefWidth="149.0" stylesheets="@UserStyle.css" text="Request Friendship" textAlignment="CENTER">
+                           <font>
+                              <Font name="Liberation Sans Bold" size="15.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button fx:id="DeclineRequest" layoutX="191.0" layoutY="506.0" mnemonicParsing="false" onAction="#handleDeclineRequest" prefHeight="35.0" prefWidth="149.0" stylesheets="@UserStyle.css" text="Decline Request" textAlignment="CENTER">
+                           <font>
+                              <Font name="Liberation Sans Bold" size="15.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Button fx:id="FindButton" layoutX="191.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleFindUser" prefHeight="35.0" prefWidth="149.0" stylesheets="@UserStyle.css" text="Find User" textAlignment="CENTER">
+                           <font>
+                              <Font name="Liberation Sans Bold" size="15.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <Label alignment="CENTER" layoutX="6.0" layoutY="174.0" prefHeight="30.0" prefWidth="94.0" styleClass="rounder-lable" stylesheets="@UserStyle.css" text="Last Name">
+                           <font>
+                              <Font name="Liberation Sans Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="6.0" layoutY="107.0" prefHeight="30.0" prefWidth="94.0" styleClass="rounder-lable" stylesheets="@UserStyle.css" text="First Name">
+                           <font>
+                              <Font name="Liberation Sans Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="6.0" layoutY="242.0" prefHeight="30.0" prefWidth="94.0" styleClass="rounder-lable" stylesheets="@UserStyle.css" text="User ID">
+                           <font>
+                              <Font name="Liberation Sans Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstNameTextField" layoutX="100.0" layoutY="107.0" prefHeight="30.0" prefWidth="198.0" styleClass="rounded-textfield" stylesheets="@UserStyle.css" />
+                        <TextField fx:id="userIdTextField" layoutX="100.0" layoutY="242.0" prefHeight="30.0" prefWidth="198.0" styleClass="rounded-textfield" stylesheets="@UserStyle.css" />
+                        <TextField fx:id="lastNameTextField" layoutX="100.0" layoutY="174.0" prefHeight="30.0" prefWidth="198.0" styleClass="rounded-textfield" stylesheets="@UserStyle.css" />
+                        <Button fx:id="AcceptRequest" layoutY="506.0" mnemonicParsing="false" onAction="#handleAcceptRequest" prefHeight="35.0" prefWidth="149.0" stylesheets="@UserStyle.css" text="Accept Request" textAlignment="CENTER">
+                           <font>
+                              <Font name="Liberation Sans Bold" size="15.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="396.0" prefWidth="232.0">
+                     <children>
+                        <TableView fx:id="tableview" layoutX="72.0" layoutY="181.0" prefHeight="30.0" prefWidth="320.0" AnchorPane.bottomAnchor="566.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="DateColumn" prefWidth="75.0" text="Date" />
+                            <TableColumn fx:id="FirstNameColumn" prefWidth="86.0" text="First Name" />
+                              <TableColumn fx:id="LastNameColumn" prefWidth="83.0" text="Last Name" />
+                              <TableColumn fx:id="StatusColumn" prefWidth="78.0" text="Status" />
+                          </columns>
+                        </TableView>
+                        <Pagination fx:id="Pagination" layoutX="-2.0" layoutY="27.0" prefHeight="579.0" prefWidth="326.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

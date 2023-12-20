@@ -1,0 +1,83 @@
+.root{
+    -fx-background-image: url('background-app-view.jpg');
+    -fx-background-size: cover;
+}
+.round-button1{
+    -fx-background-radius: 50%; /* Make the button circular */
+    -fx-min-width: 50px; /* Set the minimum width of the button */
+    -fx-min-height: 50px; /* Set the minimum height of the button */
+    -fx-border-width: 5px;
+    -fx-border-color: rgba(84, 194, 139, 0.9);
+    -fx-background-image: url('user-logo.png'); /* Set the background image */
+    -fx-background-size: cover; /* Make sure the background image covers the entire button */
+
+    /* Set circular shape for the button */
+    -fx-shape: "M 25,0 A 25,25 0 1,1 24.9999,0 Z";
+}
+.round-button1 .image-view{
+    -fx-clip-shape: "M 25,0 A 25,25 0 1,1 24.9999,0 Z"; /* Clip the image to a circular shape */
+    -fx-background-image: transparent;
+}
+
+.round-button2{
+    -fx-background-radius: 50%; /* Make the button circular */
+    -fx-min-width: 50px; /* Set the minimum width of the button */
+    -fx-min-height: 50px; /* Set the minimum height of the button */
+    -fx-padding:100px ;
+
+    -fx-border-width: 5px;
+    -fx-border-color: rgba(84, 194, 139, 0.9);
+    -fx-background-image: url('message-logo.png'); /* Set the background image */
+    -fx-background-size: cover; /* Make sure the background image covers the entire button */
+
+    /* Set circular shape for the button */
+    -fx-shape: "M 25,0 A 25,25 0 1,1 24.9999,0 Z";
+}
+.round-button2 .image-view{
+    -fx-clip-shape: "M 25,0 A 25,25 0 1,1 24.9999,0 Z"; /* Clip the image to a circular shape */
+    -fx-background-image: transparent;
+}
+
+.round-button3{
+    -fx-background-radius: 50%; /* Make the button circular */
+    -fx-min-width: 50px; /* Set the minimum width of the button */
+    -fx-min-height: 50px; /* Set the minimum height of the button */
+    -fx-border-width: 5px;
+    -fx-border-color: rgba(84, 194, 139, 0.9);
+    -fx-background-image: url('chat-icon-logo.png'); /* Set the background image */
+    -fx-background-size: cover; /* Make sure the background image covers the entire button */
+
+    /* Set circular shape for the button */
+    -fx-shape: "M 25,0 A 25,25 0 1,1 24.9999,0 Z";
+}
+.round-button3 .image-view{
+    -fx-clip-shape: "M 25,0 A 25,25 0 1,1 24.9999,0 Z"; /* Clip the image to a circular shape */
+    -fx-background-image: transparent;
+}
+.round-button4{
+    -fx-background-radius: 50%; /* Make the button circular */
+    -fx-min-width: 50px; /* Set the minimum width of the button */
+    -fx-min-height: 50px; /* Set the minimum height of the button */
+    -fx-border-width: 5px;
+    -fx-border-color: rgba(84, 194, 139, 0.9);
+    -fx-background-image: url('heart.png'); /* Set the background image */
+    -fx-background-size: cover; /* Make sure the background image covers the entire button */
+
+    /* Set circular shape for the button */
+    -fx-shape: "M 25,0 A 25,25 0 1,1 24.9999,0 Z";
+}
+.round-button4 .image-view{
+    -fx-clip-shape: "M 25,0 A 25,25 0 1,1 24.9999,0 Z"; /* Clip the image to a circular shape */
+    -fx-background-image: transparent;
+}
+
+.rounded-label {
+    -fx-background-color: rgba(67, 236, 126, 0.9); /* Background color of the label */
+    -fx-border-color: rgba(84, 194, 139, 0.9);
+    -fx-border-radius: 20px;
+    -fx-border-width: 5px;
+
+    -fx-text-fill: #000000; /* Text color of the label */
+    -fx-padding: 5px; /* Padding around the text */
+    -fx-background-radius: 20px; /* Radius for rounded corners */
+}

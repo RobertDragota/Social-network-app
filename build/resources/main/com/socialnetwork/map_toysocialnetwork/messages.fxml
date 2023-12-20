@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="910.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="com.socialnetwork.map_toysocialnetwork.Controllers.MessagesController">
+    <items>
+        <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <ListView fx:id="UsersListView" layoutX="47.0" layoutY="78.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="600.0">
+         <children>
+            <SplitPane dividerPositions="0.8826714801444043" orientation="VERTICAL" prefHeight="556.0" prefWidth="385.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="420.0">
+                     <children>
+                        <ListView fx:id="MessageListView" layoutX="92.0" layoutY="155.0" prefHeight="480.0" prefWidth="383.0" styleClass="rounded-textfield" stylesheets="@LoginStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="58.0" prefWidth="383.0" style="-fx-background-color: #2C3A4BFF;">
+                     <children>
+                        <TextField fx:id="MessageTextField" layoutX="11.0" layoutY="12.0" prefHeight="38.0" prefWidth="278.0" styleClass="rounded-textfield" stylesheets="@LoginStyle.css" />
+                        <Button fx:id="SendButton" layoutX="300.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleSend" prefHeight="24.0" prefWidth="83.0" style="-fx-text-fill: #000000;" stylesheets="@LoginStyle.css" text="Send">
+                           <font>
+                              <Font name="Dyuthi Regular" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="SendToAll" layoutX="151.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleSendToAll" prefHeight="46.0" prefWidth="138.0" style="-fx-text-fill: #000000;" stylesheets="@LoginStyle.css" text="Send to all">
+                           <font>
+                              <Font name="Dyuthi Regular" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="ReplyButton" layoutX="11.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleReply" prefHeight="46.0" prefWidth="138.0" style="-fx-text-fill: #000000;" stylesheets="@LoginStyle.css" text="Reply">
+                           <font>
+                              <Font name="Dyuthi Regular" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children></AnchorPane>
+    </items>
+</SplitPane>

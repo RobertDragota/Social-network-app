@@ -1,0 +1,32 @@
+.root{
+    -fx-background-image: url('login.jpg');
+    -fx-background-size:cover;
+}
+.rounded-label {
+    -fx-background-color:rgba(153, 255, 204, 0.9); /* Background color of the label */
+    -fx-border-color:rgb(0, 255, 204,0.7);
+    -fx-border-radius: 20px;
+    -fx-border-width: 5px;
+
+    -fx-text-fill: #000000; /* Text color of the label */
+    -fx-padding: 5px; /* Padding around the text */
+    -fx-background-radius: 20px; /* Radius for rounded corners */
+}
+
+.button{
+    -fx-background-color:rgba(153, 255, 204, 0.9);
+    -fx-background-radius: 20px;
+    -fx-border-color:rgb(0, 255, 204,0.7);
+    -fx-border-radius: 20px;
+    -fx-border-width: 5px;
+
+}
+
+.rounded-textfield {
+    -fx-background-color: #ecf0f1; /* Culoarea fundalului */
+    -fx-background-radius: 8px;;
+    -fx-padding: 8px; /* Spatiu în jurul textului */
+    -fx-border-radius: 8px; /* Radius pentru colțuri rotunjite */
+    -fx-border-width: 2px;
+    -fx-border-color: #7b807c;
+}

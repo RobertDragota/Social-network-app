@@ -1,0 +1,7 @@
+.list-cell {
+    -fx-padding: 5 10; /* Adjust these values to set top/bottom and left/right padding */
+}
+.list-cell .highlighted {
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}

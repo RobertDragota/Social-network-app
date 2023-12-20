@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!--   fx:controller="com.socialnetwork.map_toysocialnetwork.AppView"-->
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@AppStyle.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="com.socialnetwork.map_toysocialnetwork.Controllers.AppController">
+   <children>
+      <Button fx:id="UserButton" contentDisplay="GRAPHIC_ONLY" layoutX="256.0" layoutY="39.0" mnemonicParsing="false" onAction="#handleUsers" prefHeight="90.0" prefWidth="88.0" styleClass="round-button1" stylesheets="@AppStyle.css" text="Button" />
+      <Button fx:id="MessagesButton" contentDisplay="GRAPHIC_ONLY" layoutX="76.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleMessages" prefHeight="90.0" prefWidth="88.0" styleClass="round-button2" stylesheets="@AppStyle.css" text="Button" />
+      <Button fx:id="FriendButton" contentDisplay="GRAPHIC_ONLY" layoutX="456.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleFriends" prefHeight="90.0" prefWidth="88.0" styleClass="round-button3" stylesheets="@AppStyle.css" text="Button" />
+      <Label alignment="CENTER" layoutX="240.0" layoutY="129.0" prefHeight="38.0" prefWidth="121.0" styleClass="rounded-label" stylesheets="@AppStyle.css" text="Users">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="60.0" layoutY="224.0" prefHeight="38.0" prefWidth="121.0" styleClass="rounded-label" stylesheets="@AppStyle.css" text="Messages">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="440.0" layoutY="224.0" prefHeight="38.0" prefWidth="121.0" styleClass="rounded-label" stylesheets="@AppStyle.css" text="Friends">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="RequestsButton" contentDisplay="GRAPHIC_ONLY" layoutX="256.0" layoutY="224.0" mnemonicParsing="false" onAction="#handleRequests" prefHeight="90.0" prefWidth="88.0" styleClass="round-button4" stylesheets="@AppStyle.css" text="Button" />
+      <Label alignment="CENTER" layoutX="241.0" layoutY="314.0" prefHeight="38.0" prefWidth="121.0" styleClass="rounded-label" stylesheets="@AppStyle.css" text="Requests">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
