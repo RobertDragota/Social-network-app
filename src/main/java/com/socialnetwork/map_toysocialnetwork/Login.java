@@ -19,19 +19,19 @@ public class Login extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         Validator<User> userValidator=new UserValidator();
-        UserRepo userRepo=new UserRepo("jdbc:postgresql://localhost:5432/_SocialNetwork_","robert12","Asmodeus011235", userValidator);
+        UserRepo userRepo=new UserRepo("jdbc:postgresql://localhost:5432/_SocialNetwork_","user","password", userValidator);
         Validator<Friendship> friendshipValidator=new FriendshipValidator();
-        FriendshipRepo friendshipRepo=new FriendshipRepo("jdbc:postgresql://localhost:5432/_SocialNetwork_","robert12","Asmodeus011235", friendshipValidator);
+        FriendshipRepo friendshipRepo=new FriendshipRepo("jdbc:postgresql://localhost:5432/_SocialNetwork_","user","password", friendshipValidator);
         Validator<Account> validator=new AccountValidator();
-        AccountsRepo accountsRepo=new AccountsRepo("jdbc:postgresql://localhost:5432/_SocialNetwork_","robert12","Asmodeus011235",validator);
+        AccountsRepo accountsRepo=new AccountsRepo("jdbc:postgresql://localhost:5432/_SocialNetwork_","user","password",validator);
         ServiceAccount serviceAccount=new ServiceAccount(accountsRepo,userRepo,validator);
         ServiceUsers serviceUsers=new ServiceUsers(userRepo,userValidator);
         ServiceFriendship serviceFriendship=new ServiceFriendship(friendshipRepo,friendshipValidator);
         Validator<FriendshipRequest> friendshipRequestValidator=new FriendshipRequestValidator();
-        FriendshipRequestRepo friendshipRequestReo=new FriendshipRequestRepo("jdbc:postgresql://localhost:5432/_SocialNetwork_","robert12","Asmodeus011235", friendshipRequestValidator);
+        FriendshipRequestRepo friendshipRequestReo=new FriendshipRequestRepo("jdbc:postgresql://localhost:5432/_SocialNetwork_","user","password", friendshipRequestValidator);
         ServiceFriendshipRequest serviceFriendshipRequest=new ServiceFriendshipRequest(friendshipRequestReo,friendshipRequestValidator);
         Validator<Message> messageValidator =new MessageValidator();
-        MessageRepo messageRepo=new MessageRepo("jdbc:postgresql://localhost:5432/_SocialNetwork_","robert12","Asmodeus011235", messageValidator);
+        MessageRepo messageRepo=new MessageRepo("jdbc:postgresql://localhost:5432/_SocialNetwork_","user","password", messageValidator);
         ServiceMessage serviceMessage=new ServiceMessage(messageRepo,messageValidator,userRepo,friendshipRepo);
         serviceController=new ServiceController(serviceFriendship,serviceUsers,serviceAccount,serviceFriendshipRequest,serviceMessage);
         primaryStage.setResizable(false);
